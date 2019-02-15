@@ -90,11 +90,4 @@ router.post('/login', (req, res, next) => {
   })(req, res, next);
 })
 
-// Logout handle
-router.get('/logout', (req, res) => {
-  req.logout();
-  req.flash('success_msg', ' Your are no longer log in');
-  res.redirect('/users/login')
-})
-
 module.exports = router;
